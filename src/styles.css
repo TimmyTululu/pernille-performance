@@ -500,7 +500,7 @@ h2 {
   padding-bottom: clamp(76px, 8vw, 108px);
   padding-right: max(20px, calc((100% - var(--max-width)) / 2));
   padding-left: max(20px, calc((100% - var(--max-width)) / 2));
-  border-top: 1px solid rgba(83, 63, 36, 0.18);
+  border-top: 1px solid rgba(83, 63, 36, 0.3);
   background:
     radial-gradient(circle at 18% 0%, rgba(255, 249, 238, 0.25), transparent 28rem),
     radial-gradient(circle at 86% 105%, rgba(72, 45, 18, 0.34), transparent 36rem),
@@ -513,7 +513,7 @@ h2 {
   width: min(100%, var(--max-width));
   height: 1px;
   margin: calc(clamp(76px, 8vw, 108px) * -1) auto clamp(42px, 4.8vw, 60px);
-  background: linear-gradient(90deg, transparent, rgba(83, 63, 36, 0.36), transparent);
+  background: linear-gradient(90deg, transparent, rgba(66, 46, 25, 0.58), transparent);
   content: "";
 }
 
@@ -523,9 +523,12 @@ h2 {
   text-align: center;
 }
 
-.method-section h2,
-.method-section .section-kicker {
+.method-section h2 {
   color: var(--text-primary);
+}
+
+.method-section .section-kicker {
+  color: rgba(72, 48, 24, 0.82);
 }
 
 .method-section h2 {
@@ -536,21 +539,22 @@ h2 {
   max-width: 1010px;
   margin-right: auto;
   margin-left: auto;
-  color: rgba(41, 37, 29, 0.74);
+  color: rgba(41, 37, 29, 0.88);
+  font-weight: 520;
 }
 
 .method-principles {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: clamp(38px, 4.8vw, 56px);
-  border-top: 1px solid rgba(83, 63, 36, 0.28);
-  border-bottom: 1px solid rgba(83, 63, 36, 0.28);
+  border-top: 1px solid rgba(66, 46, 25, 0.42);
+  border-bottom: 1px solid rgba(66, 46, 25, 0.42);
 }
 
 .method-principle {
   min-height: 184px;
   padding: clamp(24px, 2.35vw, 34px) clamp(26px, 2.8vw, 38px);
-  border-right: 1px solid rgba(83, 63, 36, 0.28);
+  border-right: 1px solid rgba(66, 46, 25, 0.42);
 }
 
 .method-principle:last-child {
@@ -567,10 +571,10 @@ h2 {
 .method-principle span {
   display: inline-flex;
   flex: 0 0 auto;
-  color: rgba(83, 63, 36, 0.82);
-  font-size: 0.76rem;
-  font-weight: 720;
-  letter-spacing: 0.16em;
+  color: rgba(66, 46, 25, 0.92);
+  font-size: clamp(0.88rem, 1vw, 1rem);
+  font-weight: 780;
+  letter-spacing: 0.18em;
 }
 
 .method-principle h3,
@@ -590,8 +594,9 @@ h2 {
 .method-principle p {
   max-width: 320px;
   margin: 0;
-  color: rgba(41, 37, 29, 0.72);
+  color: rgba(41, 37, 29, 0.86);
   font-size: 1rem;
+  font-weight: 500;
   line-height: 1.55;
 }
 
@@ -1050,7 +1055,7 @@ h2 {
     min-height: auto;
     padding: 26px 22px;
     border-right: 0;
-    border-bottom: 1px solid rgba(83, 63, 36, 0.28);
+    border-bottom: 1px solid rgba(66, 46, 25, 0.42);
     text-align: center;
   }
 
