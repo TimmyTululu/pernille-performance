@@ -10,10 +10,12 @@
   --text-inverse: #fff9ee;
   --text-muted: #746f65;
   --text-muted-inverse: #d5ccb9;
-  --brand-gold-deep: #a97f43;
+  --brand-gold-deep: #8e642f;
   --brand-gold: #c9a069;
-  --brand-gold-light: #d9b77e;
-  --brand-gold-hover: #b88d54;
+  --brand-gold-light: #dfbd7d;
+  --brand-gold-rich: #ae7e3c;
+  --brand-gold-shadow: #735024;
+  --brand-gold-hover: #9b6e35;
   --accent: #8b744f;
   --accent-strong: #637052;
   --accent-dark: #35402b;
@@ -144,7 +146,9 @@ img {
   padding: 0 24px;
   border: 1px solid rgba(143, 103, 52, 0.36);
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--brand-gold-light), var(--brand-gold) 48%, var(--brand-gold-deep));
+  background:
+    linear-gradient(145deg, rgba(255, 249, 238, 0.30) 0%, transparent 34%),
+    linear-gradient(135deg, var(--brand-gold-light) 0%, var(--brand-gold) 30%, var(--brand-gold-rich) 64%, var(--brand-gold-deep) 100%);
   color: var(--text-primary);
   box-shadow:
     0 12px 30px rgba(169, 127, 67, 0.18),
@@ -305,7 +309,9 @@ h2 {
 
 .button-primary {
   border: 1px solid rgba(143, 103, 52, 0.38);
-  background: linear-gradient(135deg, var(--brand-gold-light), var(--brand-gold) 48%, var(--brand-gold-deep));
+  background:
+    linear-gradient(145deg, rgba(255, 249, 238, 0.30) 0%, transparent 34%),
+    linear-gradient(135deg, var(--brand-gold-light) 0%, var(--brand-gold) 30%, var(--brand-gold-rich) 64%, var(--brand-gold-deep) 100%);
   color: var(--text-primary);
   box-shadow:
     0 16px 38px rgba(169, 127, 67, 0.2),
@@ -315,7 +321,9 @@ h2 {
 .button-primary:hover,
 .nav-cta:hover {
   border-color: rgba(132, 91, 43, 0.46);
-  background: linear-gradient(135deg, var(--brand-gold), var(--brand-gold-hover) 52%, #926a34);
+  background:
+    linear-gradient(145deg, rgba(255, 249, 238, 0.22) 0%, transparent 32%),
+    linear-gradient(135deg, var(--brand-gold) 0%, var(--brand-gold-hover) 48%, var(--brand-gold-shadow) 100%);
   color: var(--text-primary);
   box-shadow:
     0 18px 42px rgba(169, 127, 67, 0.24),
@@ -324,7 +332,9 @@ h2 {
 
 .apply .button-primary {
   border-color: rgba(143, 103, 52, 0.38);
-  background: linear-gradient(135deg, var(--brand-gold-light), var(--brand-gold) 48%, var(--brand-gold-deep));
+  background:
+    linear-gradient(145deg, rgba(255, 249, 238, 0.30) 0%, transparent 34%),
+    linear-gradient(135deg, var(--brand-gold-light) 0%, var(--brand-gold) 30%, var(--brand-gold-rich) 64%, var(--brand-gold-deep) 100%);
   color: var(--text-primary);
   min-height: 62px;
   padding: 0 42px;
@@ -338,7 +348,9 @@ h2 {
 
 .apply .button-primary:hover {
   border-color: rgba(132, 91, 43, 0.46);
-  background: linear-gradient(135deg, var(--brand-gold), var(--brand-gold-hover) 52%, #926a34);
+  background:
+    linear-gradient(145deg, rgba(255, 249, 238, 0.22) 0%, transparent 32%),
+    linear-gradient(135deg, var(--brand-gold) 0%, var(--brand-gold-hover) 48%, var(--brand-gold-shadow) 100%);
   color: var(--text-primary);
   box-shadow:
     0 16px 38px rgba(169, 127, 67, 0.26),
@@ -486,8 +498,9 @@ h2 {
   padding-left: max(20px, calc((100% - var(--max-width)) / 2));
   border-top: 1px solid rgba(83, 63, 36, 0.18);
   background:
-    radial-gradient(circle at 50% -18%, rgba(255, 249, 238, 0.18), transparent 34rem),
-    linear-gradient(135deg, #d7b275 0%, var(--brand-gold) 38%, #b88b4d 100%);
+    radial-gradient(circle at 18% 0%, rgba(255, 249, 238, 0.25), transparent 28rem),
+    radial-gradient(circle at 86% 105%, rgba(72, 45, 18, 0.34), transparent 36rem),
+    linear-gradient(128deg, #d7af6c 0%, var(--brand-gold) 24%, var(--brand-gold-rich) 58%, #805424 100%);
   color: var(--text-primary);
 }
 
