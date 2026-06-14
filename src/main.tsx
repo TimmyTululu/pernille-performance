@@ -23,16 +23,6 @@ const pillars = [
   },
 ];
 
-const results = [
-  "Stronger routines",
-  "Sharper focus",
-  "Better emotional control under pressure",
-  "Higher standards around training and recovery",
-  "Cleaner decision-making",
-  "More consistent execution",
-  "A stronger sense of personal authority",
-];
-
 const fitSignals = [
   "You want direct 1:1 coaching",
   "You are ready to be challenged",
@@ -75,7 +65,6 @@ function App() {
         </a>
         <nav className="nav-links" aria-label="Primary navigation">
           <a href="#method">Method</a>
-          <a href="#results">Results</a>
           <a href="#who">For</a>
           <a href="#apply">Apply</a>
         </nav>
@@ -143,27 +132,6 @@ function App() {
         </section>
 
         <section
-          className="section section-dark"
-          id="results"
-          aria-labelledby="results-title"
-          data-reveal
-        >
-          <div className="section-heading">
-            <p className="section-kicker">Results</p>
-            <h2 id="results-title">Built for real performance.</h2>
-            <p>
-              This is coaching for women who want measurable change in how they
-              operate.
-            </p>
-          </div>
-          <ul className="result-grid">
-            {results.map((result) => (
-              <li key={result}>{result}</li>
-            ))}
-          </ul>
-        </section>
-
-        <section
           className="section split"
           id="who"
           aria-labelledby="who-title"
@@ -227,7 +195,6 @@ function App() {
         </div>
         <nav aria-label="Footer navigation">
           <a href="#method">Method</a>
-          <a href="#results">Results</a>
           <a href="#who">Who It&apos;s For</a>
           <a href="#apply">Apply</a>
         </nav>
