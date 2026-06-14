@@ -97,7 +97,7 @@ function App() {
           </div>
           <figure className="hero-media hero-reveal">
             <img
-              src="/images/hero-4-good.png"
+              src="/images/hero-4-good-original.png"
               alt="Pernille in a focused performance coaching portrait"
               width="6144"
               height="8192"
