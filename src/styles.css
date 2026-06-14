@@ -197,8 +197,7 @@ main {
   max-width: 670px;
 }
 
-.eyebrow,
-.section-kicker {
+.eyebrow {
   margin: 0;
   color: var(--accent);
   font-size: 0.72rem;
@@ -208,7 +207,12 @@ main {
 }
 
 .section-kicker {
-  margin-bottom: clamp(20px, 2.2vw, 28px);
+  margin: 0 0 clamp(20px, 2.2vw, 28px);
+  color: var(--accent);
+  font-size: clamp(1.08rem, 1.55vw, 1.34rem);
+  font-weight: 720;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 h1,
@@ -426,7 +430,7 @@ h2 {
 }
 
 .section-heading p:not(.section-kicker),
-.apply p {
+.apply p:not(.section-kicker) {
   color: var(--muted);
   font-size: clamp(1rem, 1.6vw, 1.22rem);
   line-height: 1.55;
@@ -890,7 +894,7 @@ h2 {
   line-height: 0.98;
 }
 
-.apply p {
+.apply p:not(.section-kicker) {
   max-width: 900px;
   margin-bottom: 34px;
   font-size: clamp(1.08rem, 1.55vw, 1.34rem);
@@ -1210,7 +1214,7 @@ h2 {
     font-size: clamp(2.85rem, 12vw, 4.1rem);
   }
 
-  .apply p {
+  .apply p:not(.section-kicker) {
     max-width: 34ch;
     white-space: normal;
   }
