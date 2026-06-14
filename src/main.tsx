@@ -125,9 +125,6 @@ function App() {
           <span className="brand-mark" aria-hidden="true">
             <img src="/images/pernille-performance-logo.png" alt="" />
           </span>
-          <span className="brand-wordmark" aria-hidden="true">
-            <img src="/images/pernille-performance-wordmark.png" alt="" />
-          </span>
         </a>
         <nav className="nav-links" aria-label="Primary navigation">
           <a href="#method">Method</a>

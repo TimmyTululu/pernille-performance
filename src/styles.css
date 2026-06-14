@@ -109,8 +109,7 @@ img {
   justify-self: start;
   display: inline-flex;
   align-items: center;
-  gap: 13px;
-  width: 284px;
+  width: 64px;
   height: 64px;
   max-height: 64px;
 }
@@ -128,21 +127,6 @@ img {
   height: 82px;
   max-width: none;
   transform: translate(-12px, -11px);
-}
-
-.brand-wordmark {
-  position: relative;
-  width: 202px;
-  height: 42px;
-  flex: 0 0 202px;
-  overflow: hidden;
-}
-
-.brand-wordmark img {
-  width: 263px;
-  height: 263px;
-  max-width: none;
-  transform: translate(-30px, -110px);
 }
 
 .nav-links {
@@ -1192,22 +1176,9 @@ h2 {
   }
 
   .brand {
-    gap: 11px;
-    width: 246px;
+    width: 56px;
     height: 56px;
     max-height: 56px;
-  }
-
-  .brand-wordmark {
-    width: 179px;
-    height: 37px;
-    flex-basis: 179px;
-  }
-
-  .brand-wordmark img {
-    width: 233px;
-    height: 233px;
-    transform: translate(-27px, -98px);
   }
 
   .brand-mark {
