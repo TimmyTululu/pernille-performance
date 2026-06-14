@@ -665,6 +665,14 @@ h2 {
   line-height: 1.44;
 }
 
+@media (min-width: 1041px) {
+  .testimonial-card p {
+    max-width: 92ch;
+    font-size: clamp(1.02rem, 1.04vw, 1.12rem);
+    line-height: 1.54;
+  }
+}
+
 .testimonial-card footer {
   display: flex;
   align-items: baseline;
