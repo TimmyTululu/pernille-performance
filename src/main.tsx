@@ -1,4 +1,4 @@
-import { StrictMode } from "react";
+import { StrictMode, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles.css";
 
@@ -39,6 +39,31 @@ const fitSignals = [
 ];
 
 function App() {
+  useEffect(() => {
+    const revealElements = document.querySelectorAll<HTMLElement>("[data-reveal]");
+
+    if (!("IntersectionObserver" in window)) {
+      revealElements.forEach((element) => element.classList.add("is-visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: "0px 0px -12% 0px", threshold: 0.16 },
+    );
+
+    revealElements.forEach((element) => observer.observe(element));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <header className="site-header">
@@ -59,23 +84,24 @@ function App() {
       <main id="top">
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <p className="eyebrow">1:1 High-Performance Coaching</p>
-            <h1 id="hero-title">
-              Elite performance coaching for women ready to raise their
-              standard.
+            <p className="eyebrow hero-reveal">1:1 High-Performance Coaching</p>
+            <h1 className="hero-reveal" id="hero-title">
+              Elite performance coaching for women already in motion.
             </h1>
-            <p className="hero-lead">
+            <p className="hero-lead hero-reveal">
               1:1 coaching for ambitious women in sport, business, and life,
               built around clarity, discipline, strength, and execution.
             </p>
-            <div className="hero-actions">
+            <div className="hero-actions hero-reveal">
               <a className="button button-primary" href={applicationLink}>
                 Level Up
               </a>
-              <p>Remote. Personal. Built for serious women.</p>
             </div>
+            <p className="hero-microcopy hero-reveal">
+              Remote coaching. Personal standards. Serious women only.
+            </p>
           </div>
-          <figure className="hero-media">
+          <figure className="hero-media hero-reveal">
             <img
               src="/images/hero-pernille.jpg"
               alt="Pernille in a focused performance coaching portrait"
@@ -86,7 +112,12 @@ function App() {
           </figure>
         </section>
 
-        <section className="section" id="method" aria-labelledby="method-title">
+        <section
+          className="section"
+          id="method"
+          aria-labelledby="method-title"
+          data-reveal
+        >
           <div className="section-heading">
             <p className="section-kicker">Method</p>
             <h2 id="method-title">Performance is trained.</h2>
@@ -110,6 +141,7 @@ function App() {
           className="section section-dark"
           id="results"
           aria-labelledby="results-title"
+          data-reveal
         >
           <div className="section-heading">
             <p className="section-kicker">Results</p>
@@ -126,7 +158,12 @@ function App() {
           </ul>
         </section>
 
-        <section className="section split" id="who" aria-labelledby="who-title">
+        <section
+          className="section split"
+          id="who"
+          aria-labelledby="who-title"
+          data-reveal
+        >
           <div className="section-heading">
             <p className="section-kicker">Who It&apos;s For</p>
             <h2 id="who-title">For women who are already in motion.</h2>
@@ -150,7 +187,7 @@ function App() {
           </div>
         </section>
 
-        <section className="section about" aria-labelledby="about-title">
+        <section className="section about" aria-labelledby="about-title" data-reveal>
           <div>
             <p className="section-kicker">Coach</p>
             <h2 id="about-title">Coached by Pernille.</h2>
@@ -164,7 +201,7 @@ function App() {
           <p className="about-note">Danish by background. Global by practice.</p>
         </section>
 
-        <section className="apply" id="apply" aria-labelledby="apply-title">
+        <section className="apply" id="apply" aria-labelledby="apply-title" data-reveal>
           <p className="section-kicker">Apply</p>
           <h2 id="apply-title">Ready to level up?</h2>
           <p>
