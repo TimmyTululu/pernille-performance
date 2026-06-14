@@ -268,10 +268,7 @@ function App() {
                 swipeStartX.current = null;
               }}
             >
-              <div
-                className="testimonial-track"
-                style={{ transform: `translate3d(-${activeTestimonial * 100}%, 0, 0)` }}
-              >
+              <div className={`testimonial-track testimonial-track-${activeTestimonial}`}>
                 {testimonials.map((testimonial) => (
                   <div className="testimonial-slide" key={testimonial.name}>
                     <article className="testimonial-card">

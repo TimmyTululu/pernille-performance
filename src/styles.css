@@ -616,6 +616,30 @@ h2 {
   will-change: transform;
 }
 
+.testimonial-track-0 {
+  transform: translate3d(0, 0, 0);
+}
+
+.testimonial-track-1 {
+  transform: translate3d(-100%, 0, 0);
+}
+
+.testimonial-track-2 {
+  transform: translate3d(-200%, 0, 0);
+}
+
+.testimonial-track-3 {
+  transform: translate3d(-300%, 0, 0);
+}
+
+.testimonial-track-4 {
+  transform: translate3d(-400%, 0, 0);
+}
+
+.testimonial-track-5 {
+  transform: translate3d(-500%, 0, 0);
+}
+
 .testimonial-slide {
   display: flex;
   flex: 0 0 100%;
