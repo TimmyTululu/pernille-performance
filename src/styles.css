@@ -1192,13 +1192,22 @@ h2 {
   }
 
   .brand {
-    width: 56px;
+    gap: 11px;
+    width: 246px;
     height: 56px;
     max-height: 56px;
   }
 
   .brand-wordmark {
-    display: none;
+    width: 179px;
+    height: 37px;
+    flex-basis: 179px;
+  }
+
+  .brand-wordmark img {
+    width: 233px;
+    height: 233px;
+    transform: translate(-27px, -98px);
   }
 
   .brand-mark {
