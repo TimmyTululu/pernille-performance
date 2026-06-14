@@ -413,8 +413,8 @@ h2 {
   width: 100%;
   max-width: none;
   margin: 0;
-  padding-right: max(20px, calc((100vw - var(--max-width)) / 2));
-  padding-left: max(20px, calc((100vw - var(--max-width)) / 2));
+  padding-right: max(20px, calc((100% - var(--max-width)) / 2));
+  padding-left: max(20px, calc((100% - var(--max-width)) / 2));
   border-top: 1px solid rgba(244, 238, 227, 0.16);
   background:
     radial-gradient(circle at 50% -14%, rgba(177, 146, 92, 0.14), transparent 34rem),
@@ -892,6 +892,10 @@ h2 {
     flex-basis: min(76vw, 560px);
   }
 
+  .testimonial-track {
+    animation-duration: 82s;
+  }
+
   .site-footer {
     grid-template-columns: 1fr;
     align-items: start;
@@ -927,6 +931,12 @@ h2 {
   .apply,
   .site-footer {
     width: min(calc(100% - 28px), var(--max-width));
+  }
+
+  .method-section {
+    width: 100%;
+    padding-right: 14px;
+    padding-left: 14px;
   }
 
   .hero {
@@ -994,6 +1004,10 @@ h2 {
     flex-basis: min(86vw, 390px);
     min-height: 360px;
     padding: 22px;
+  }
+
+  .testimonial-track {
+    animation-duration: 58s;
   }
 
   .fit-panel {
