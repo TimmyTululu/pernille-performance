@@ -7,17 +7,17 @@ const applicationLink =
 
 const pillars = [
   {
-    number: "01",
+    number: "1",
     title: "Clarity",
     copy: "Know what matters, what moves the needle, and what needs to stop draining energy.",
   },
   {
-    number: "02",
+    number: "2",
     title: "Discipline",
     copy: "Create standards you can live by in training, work, recovery, and decision-making.",
   },
   {
-    number: "03",
+    number: "3",
     title: "Execution",
     copy: "Move with focus. Follow through under pressure. Build proof through action.",
   },

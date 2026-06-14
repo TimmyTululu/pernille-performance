@@ -592,9 +592,10 @@ h2 {
   display: inline-flex;
   flex: 0 0 auto;
   color: rgba(66, 46, 25, 0.92);
-  font-size: clamp(0.88rem, 1vw, 1rem);
-  font-weight: 780;
-  letter-spacing: 0.18em;
+  font-size: clamp(1.05rem, 1.25vw, 1.22rem);
+  font-weight: 560;
+  line-height: 1;
+  letter-spacing: 0.02em;
 }
 
 .method-principle h3,
