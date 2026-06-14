@@ -1,23 +1,23 @@
 :root {
-  color-scheme: dark light;
-  --bg-dark: #18140f;
-  --bg-deep: #211a13;
-  --bg-graphite: #141611;
-  --bg-light: #f3ebdd;
-  --bg-soft: #fbf6eb;
-  --bg-warm: #e3d4bf;
-  --text-primary: #211811;
-  --text-inverse: #fff7e8;
-  --text-muted: #817569;
-  --text-muted-inverse: #cbbfaf;
-  --accent: #8e6a43;
-  --accent-strong: #4d5835;
-  --accent-dark: #2c3521;
-  --border: rgba(73, 58, 42, 0.18);
-  --border-strong: rgba(73, 58, 42, 0.32);
-  --border-inverse: rgba(255, 247, 232, 0.18);
-  --border-inverse-strong: rgba(202, 169, 126, 0.42);
-  --shadow-warm: rgba(9, 7, 5, 0.42);
+  color-scheme: light;
+  --bg-dark: #24251f;
+  --bg-deep: #343329;
+  --bg-graphite: #20231d;
+  --bg-light: #f1eee6;
+  --bg-soft: #f8f4ea;
+  --bg-warm: #dfd7c9;
+  --text-primary: #29251d;
+  --text-inverse: #fff9ee;
+  --text-muted: #746f65;
+  --text-muted-inverse: #d5ccb9;
+  --accent: #8b744f;
+  --accent-strong: #637052;
+  --accent-dark: #35402b;
+  --border: rgba(79, 73, 63, 0.18);
+  --border-strong: rgba(79, 73, 63, 0.32);
+  --border-inverse: rgba(255, 249, 238, 0.18);
+  --border-inverse-strong: rgba(139, 116, 79, 0.36);
+  --shadow-warm: rgba(54, 48, 39, 0.18);
   --ink: var(--text-primary);
   --charcoal: var(--bg-deep);
   --graphite: var(--bg-graphite);
@@ -53,7 +53,10 @@ html {
 body {
   min-height: 100vh;
   margin: 0;
-  background: var(--bg-light);
+  background:
+    radial-gradient(circle at 78% 4%, rgba(139, 116, 79, 0.13), transparent 32rem),
+    radial-gradient(circle at 4% 12%, rgba(99, 112, 82, 0.12), transparent 30rem),
+    linear-gradient(180deg, #f8f4ea 0%, #f1eee6 34rem, #eee8dd 100%);
   color: var(--text-primary);
 }
 
@@ -83,8 +86,8 @@ img {
   min-height: 88px;
   margin: 0 auto;
   padding: 0 max(28px, calc((100vw - var(--max-width)) / 2));
-  border-bottom: 1px solid var(--border-inverse);
-  background: rgba(24, 20, 15, 0.86);
+  border-bottom: 1px solid rgba(79, 73, 63, 0.16);
+  background: rgba(248, 244, 234, 0.84);
   backdrop-filter: blur(22px);
 }
 
@@ -97,7 +100,7 @@ img {
 
 .brand {
   justify-self: start;
-  color: var(--text-inverse);
+  color: var(--text-primary);
   font-size: 1rem;
   font-weight: 620;
   letter-spacing: 0;
@@ -107,7 +110,7 @@ img {
   display: flex;
   align-items: center;
   gap: 38px;
-  color: rgba(255, 247, 232, 0.66);
+  color: rgba(54, 58, 47, 0.66);
   font-size: 0.8rem;
   font-weight: 640;
   letter-spacing: 0.09em;
@@ -123,7 +126,7 @@ img {
 
 .nav-links a:hover,
 .site-footer a:hover {
-  color: var(--accent);
+  color: var(--accent-dark);
   opacity: 1;
 }
 
@@ -134,9 +137,9 @@ img {
   justify-content: center;
   min-height: 44px;
   padding: 0 24px;
-  border: 1px solid rgba(202, 169, 126, 0.55);
+  border: 1px solid rgba(53, 64, 43, 0.28);
   border-radius: 999px;
-  background: rgba(255, 247, 232, 0.08);
+  background: var(--accent-dark);
   color: var(--text-inverse);
   font-size: 0.82rem;
   font-weight: 720;
@@ -169,12 +172,12 @@ main {
     clamp(66px, 7vw, 112px)
     max(20px, calc((100vw - var(--max-width)) / 2))
     clamp(96px, 9vw, 148px);
-  border-bottom: 1px solid var(--border-inverse);
+  border-bottom: 1px solid var(--border);
   background:
-    radial-gradient(circle at 72% 22%, rgba(142, 106, 67, 0.28), transparent 26rem),
-    radial-gradient(circle at 8% 16%, rgba(77, 88, 53, 0.26), transparent 28rem),
-    linear-gradient(135deg, #211a13 0%, #18140f 45%, #11130f 100%);
-  color: var(--text-inverse);
+    linear-gradient(120deg, rgba(99, 112, 82, 0.1), transparent 34rem),
+    radial-gradient(circle at 82% 16%, rgba(139, 116, 79, 0.14), transparent 30rem),
+    linear-gradient(135deg, #f8f4ea 0%, #f1eee6 48%, #e8e1d3 100%);
+  color: var(--text-primary);
 }
 
 .hero-copy {
@@ -215,11 +218,11 @@ h2 {
 h1 {
   max-width: 750px;
   margin: 22px 0 30px;
-  color: var(--text-inverse);
+  color: var(--text-primary);
   font-size: clamp(3.3rem, 5.25vw, 5.55rem);
-  font-weight: 560;
-  letter-spacing: 0.005em;
-  line-height: 0.98;
+  font-weight: 540;
+  letter-spacing: 0.01em;
+  line-height: 1;
   text-wrap: balance;
 }
 
@@ -232,7 +235,7 @@ h2 {
 .hero-lead {
   max-width: 620px;
   margin-bottom: 0;
-  color: var(--text-muted-inverse);
+  color: var(--text-muted);
   font-size: clamp(1.05rem, 1.26vw, 1.2rem);
   line-height: 1.7;
 }
@@ -252,8 +255,8 @@ h2 {
   max-width: 620px;
   margin: 28px 0 0;
   padding-top: 20px;
-  border-top: 1px solid var(--border-inverse-strong);
-  color: rgba(255, 247, 232, 0.63);
+  border-top: 1px solid rgba(139, 116, 79, 0.32);
+  color: rgba(69, 73, 60, 0.7);
   font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -293,17 +296,17 @@ h2 {
 }
 
 .button-primary {
-  border: 1px solid rgba(202, 169, 126, 0.64);
-  background: var(--text-inverse);
-  color: var(--bg-dark);
+  border: 1px solid var(--accent-dark);
+  background: var(--accent-dark);
+  color: var(--text-inverse);
 }
 
 .button-primary:hover,
 .nav-cta:hover {
-  background: #e7d6bd;
-  border-color: rgba(202, 169, 126, 0.86);
-  color: var(--bg-dark);
-  box-shadow: 0 18px 42px rgba(9, 7, 5, 0.22);
+  background: #26311f;
+  border-color: #26311f;
+  color: var(--text-inverse);
+  box-shadow: 0 18px 42px rgba(53, 64, 43, 0.18);
 }
 
 .apply .button-primary {
@@ -334,20 +337,20 @@ h2 {
   margin: 0;
   overflow: hidden;
   padding: clamp(10px, 1vw, 14px);
-  border: 1px solid var(--border-inverse-strong);
+  border: 1px solid rgba(139, 116, 79, 0.34);
   border-radius: 6px;
   background:
-    linear-gradient(135deg, rgba(255, 247, 232, 0.13), rgba(142, 106, 67, 0.12)),
-    rgba(255, 247, 232, 0.06);
+    linear-gradient(135deg, rgba(255, 249, 238, 0.86), rgba(223, 215, 201, 0.52)),
+    rgba(248, 244, 234, 0.72);
   box-shadow:
-    0 34px 88px var(--shadow-warm),
-    0 1px 0 rgba(255, 247, 232, 0.3) inset;
+    0 30px 72px var(--shadow-warm),
+    0 1px 0 rgba(255, 249, 238, 0.86) inset;
 }
 
 .hero-media::after {
   position: absolute;
   inset: clamp(10px, 1vw, 14px);
-  border: 1px solid rgba(255, 247, 232, 0.35);
+  border: 1px solid rgba(255, 249, 238, 0.72);
   border-radius: 3px;
   content: "";
   pointer-events: none;
