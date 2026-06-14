@@ -1,4 +1,4 @@
-import { StrictMode, useEffect } from "react";
+import { StrictMode, useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles.css";
 
@@ -65,6 +65,8 @@ const testimonials = [
 ];
 
 function App() {
+  const [isTestimonialPaused, setIsTestimonialPaused] = useState(false);
+
   useEffect(() => {
     const revealElements = document.querySelectorAll<HTMLElement>("[data-reveal]");
 
@@ -175,7 +177,14 @@ function App() {
             <p className="section-kicker">Testimonials</p>
             <h2 id="testimonials-title">Trusted by women doing the work</h2>
           </div>
-          <div className="testimonial-marquee" aria-label="Client testimonials">
+          <div
+            className={`testimonial-marquee${isTestimonialPaused ? " is-paused" : ""}`}
+            aria-label="Client testimonials"
+            onPointerDown={() => setIsTestimonialPaused(true)}
+            onPointerUp={() => setIsTestimonialPaused(false)}
+            onPointerCancel={() => setIsTestimonialPaused(false)}
+            onPointerLeave={() => setIsTestimonialPaused(false)}
+          >
             <div className="testimonial-track">
               {[...testimonials, ...testimonials].map((testimonial, index) => (
                 <article

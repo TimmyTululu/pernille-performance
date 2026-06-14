@@ -532,6 +532,7 @@ h2 {
   width: 100%;
   overflow: hidden;
   mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  touch-action: pan-y;
 }
 
 .testimonial-track {
@@ -543,8 +544,14 @@ h2 {
   will-change: transform;
 }
 
-.testimonial-marquee:hover .testimonial-track {
+.testimonial-marquee.is-paused .testimonial-track {
   animation-play-state: paused;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .testimonial-marquee:hover .testimonial-track {
+    animation-play-state: paused;
+  }
 }
 
 .testimonial-card {
