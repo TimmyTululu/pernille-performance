@@ -127,7 +127,7 @@ function App() {
         <nav className="nav-links" aria-label="Primary navigation">
           <a href="#method">Method</a>
           <a href="#testimonials">Testimonials</a>
-          <a href="#who">For</a>
+          <a href="#who">For You</a>
           <a href="#apply">Apply</a>
         </nav>
         <a className="nav-cta" href={applicationLink}>
