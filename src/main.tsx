@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./styles.css";
 
 const applicationLink =
-  "mailto:hello@pernilleperformance.com?subject=Coaching%20Application";
+  "https://wa.me/541126845921?text=Hi%20Pernille%2C%20I%27m%20interested%20in%201%3A1%20performance%20coaching.";
 
 const pillars = [
   {
