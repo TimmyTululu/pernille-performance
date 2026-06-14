@@ -418,6 +418,8 @@ h2 {
   width: 100%;
   max-width: none;
   margin: 0;
+  padding-top: clamp(76px, 8vw, 108px);
+  padding-bottom: clamp(76px, 8vw, 108px);
   padding-right: max(20px, calc((100% - var(--max-width)) / 2));
   padding-left: max(20px, calc((100% - var(--max-width)) / 2));
   border-top: 1px solid rgba(244, 238, 227, 0.16);
@@ -432,7 +434,7 @@ h2 {
   display: block;
   width: min(100%, var(--max-width));
   height: 1px;
-  margin: calc(clamp(86px, 9vw, 124px) * -1) auto clamp(48px, 5vw, 68px);
+  margin: calc(clamp(76px, 8vw, 108px) * -1) auto clamp(42px, 4.8vw, 60px);
   background: linear-gradient(90deg, transparent, rgba(160, 120, 79, 0.68), transparent);
   content: "";
 }
@@ -462,14 +464,14 @@ h2 {
 .method-principles {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: clamp(46px, 5.5vw, 68px);
+  margin-top: clamp(38px, 4.8vw, 56px);
   border-top: 1px solid var(--line-dark);
   border-bottom: 1px solid var(--line-dark);
 }
 
 .method-principle {
-  min-height: 214px;
-  padding: clamp(26px, 2.8vw, 38px);
+  min-height: 184px;
+  padding: clamp(24px, 2.35vw, 34px) clamp(26px, 2.8vw, 38px);
   border-right: 1px solid var(--line-dark);
 }
 
@@ -477,9 +479,16 @@ h2 {
   border-right: 0;
 }
 
+.method-principle-heading {
+  display: flex;
+  align-items: baseline;
+  gap: clamp(18px, 2vw, 28px);
+  margin-bottom: clamp(22px, 2.4vw, 30px);
+}
+
 .method-principle span {
-  display: block;
-  margin-bottom: clamp(34px, 4vw, 52px);
+  display: inline-flex;
+  flex: 0 0 auto;
   color: var(--tobacco);
   font-size: 0.76rem;
   font-weight: 720;
@@ -496,7 +505,7 @@ h2 {
 }
 
 .method-principle h3 {
-  margin: 0 0 18px;
+  margin: 0;
   color: var(--white);
 }
 
@@ -950,6 +959,7 @@ h2 {
 
   .method-principle {
     min-height: auto;
+    padding: 26px 22px;
     border-right: 0;
     border-bottom: 1px solid var(--line-dark);
   }
@@ -1068,10 +1078,6 @@ h2 {
   .apply p {
     max-width: 34ch;
     white-space: normal;
-  }
-
-  .method-principle {
-    min-height: 220px;
   }
 
   .testimonials {

@@ -193,8 +193,10 @@ function App() {
           <div className="method-principles">
             {pillars.map((pillar) => (
               <article className="method-principle" key={pillar.title}>
-                <span>{pillar.number}</span>
-                <h3>{pillar.title}</h3>
+                <div className="method-principle-heading">
+                  <span>{pillar.number}</span>
+                  <h3>{pillar.title}</h3>
+                </div>
                 <p>{pillar.copy}</p>
               </article>
             ))}
