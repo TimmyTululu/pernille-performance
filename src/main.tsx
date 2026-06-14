@@ -108,10 +108,10 @@ function App() {
           </div>
           <figure className="hero-media hero-reveal">
             <img
-              src="/images/real-hero-pernille.jpg"
+              src="/images/hero-4-good.png"
               alt="Pernille in a focused performance coaching portrait"
-              width="3072"
-              height="4096"
+              width="6144"
+              height="8192"
               fetchPriority="high"
             />
           </figure>
