@@ -1,4 +1,4 @@
-import { StrictMode, useEffect, useState } from "react";
+import { StrictMode, useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles.css";
 
@@ -65,7 +65,33 @@ const testimonials = [
 ];
 
 function App() {
-  const [isTestimonialPaused, setIsTestimonialPaused] = useState(false);
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const swipeStartX = useRef<number | null>(null);
+
+  const showPreviousTestimonial = () => {
+    setActiveTestimonial((current) =>
+      current === 0 ? testimonials.length - 1 : current - 1,
+    );
+  };
+
+  const showNextTestimonial = () => {
+    setActiveTestimonial((current) => (current + 1) % testimonials.length);
+  };
+
+  const handleTestimonialPointerUp = (clientX: number) => {
+    if (swipeStartX.current === null) return;
+
+    const distance = swipeStartX.current - clientX;
+    swipeStartX.current = null;
+
+    if (Math.abs(distance) < 42) return;
+
+    if (distance > 0) {
+      showNextTestimonial();
+    } else {
+      showPreviousTestimonial();
+    }
+  };
 
   useEffect(() => {
     const revealElements = document.querySelectorAll<HTMLElement>("[data-reveal]");
@@ -132,13 +158,21 @@ function App() {
             </p>
           </div>
           <figure className="hero-media hero-reveal">
-            <img
-              src="/images/hero-4-good-original.png"
-              alt="Pernille in a focused performance coaching portrait"
-              width="6144"
-              height="8192"
-              fetchPriority="high"
-            />
+            <picture>
+              <source
+                srcSet="/images/hero-4-good-960.webp 960w, /images/hero-4-good-1536.webp 1536w"
+                sizes="(max-width: 680px) calc(100vw - 28px), (max-width: 1040px) calc(100vw - 40px), 48vw"
+                type="image/webp"
+              />
+              <img
+                src="/images/hero-4-good-1536.webp"
+                alt="Pernille in a focused performance coaching portrait"
+                width="1536"
+                height="2048"
+                fetchPriority="high"
+                decoding="async"
+              />
+            </picture>
           </figure>
         </section>
 
@@ -177,27 +211,63 @@ function App() {
             <p className="section-kicker">Testimonials</p>
             <h2 id="testimonials-title">Trusted by women doing the work</h2>
           </div>
-          <div
-            className={`testimonial-marquee${isTestimonialPaused ? " is-paused" : ""}`}
-            aria-label="Client testimonials"
-            onPointerDown={() => setIsTestimonialPaused(true)}
-            onPointerUp={() => setIsTestimonialPaused(false)}
-            onPointerCancel={() => setIsTestimonialPaused(false)}
-            onPointerLeave={() => setIsTestimonialPaused(false)}
-          >
-            <div className="testimonial-track">
-              {[...testimonials, ...testimonials].map((testimonial, index) => (
-                <article
-                  className="testimonial-card"
-                  key={`${testimonial.name}-${index}`}
-                  aria-hidden={index >= testimonials.length}
-                >
-                  <p>{testimonial.copy}</p>
-                  <footer>
-                    <strong>{testimonial.name}</strong>
-                    <span>{testimonial.location}</span>
-                  </footer>
-                </article>
+          <div className="testimonial-carousel" aria-label="Client testimonials">
+            <button
+              className="testimonial-control testimonial-control-previous"
+              type="button"
+              aria-label="Previous testimonial"
+              onClick={showPreviousTestimonial}
+            >
+              <span aria-hidden="true">‹</span>
+            </button>
+            <div
+              className="testimonial-viewport"
+              onPointerDown={(event) => {
+                swipeStartX.current = event.clientX;
+              }}
+              onPointerUp={(event) => handleTestimonialPointerUp(event.clientX)}
+              onPointerCancel={() => {
+                swipeStartX.current = null;
+              }}
+              onPointerLeave={() => {
+                swipeStartX.current = null;
+              }}
+            >
+              <div
+                className="testimonial-track"
+                style={{ transform: `translate3d(-${activeTestimonial * 100}%, 0, 0)` }}
+              >
+                {testimonials.map((testimonial) => (
+                  <div className="testimonial-slide" key={testimonial.name}>
+                    <article className="testimonial-card">
+                      <p>{testimonial.copy}</p>
+                      <footer>
+                        <strong>{testimonial.name}</strong>
+                        <span>{testimonial.location}</span>
+                      </footer>
+                    </article>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <button
+              className="testimonial-control testimonial-control-next"
+              type="button"
+              aria-label="Next testimonial"
+              onClick={showNextTestimonial}
+            >
+              <span aria-hidden="true">›</span>
+            </button>
+            <div className="testimonial-dots" aria-label="Choose testimonial">
+              {testimonials.map((testimonial, index) => (
+                <button
+                  className={index === activeTestimonial ? "is-active" : undefined}
+                  type="button"
+                  key={testimonial.name}
+                  aria-label={`Show ${testimonial.name}'s testimonial`}
+                  aria-current={index === activeTestimonial}
+                  onClick={() => setActiveTestimonial(index)}
+                />
               ))}
             </div>
           </div>
