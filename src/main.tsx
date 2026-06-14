@@ -7,14 +7,17 @@ const applicationLink =
 
 const pillars = [
   {
+    number: "01",
     title: "Clarity",
     copy: "Know what matters, what moves the needle, and what needs to stop draining energy.",
   },
   {
+    number: "02",
     title: "Discipline",
-    copy: "Create standards you can actually live by in training, work, recovery, and decision-making.",
+    copy: "Create standards you can live by in training, work, recovery, and decision-making.",
   },
   {
+    number: "03",
     title: "Execution",
     copy: "Move with focus. Follow through under pressure. Build proof through action.",
   },
@@ -115,7 +118,7 @@ function App() {
         </section>
 
         <section
-          className="section"
+          className="section method-section"
           id="method"
           aria-labelledby="method-title"
           data-reveal
@@ -124,15 +127,15 @@ function App() {
             <p className="section-kicker">Method</p>
             <h2 id="method-title">Performance is trained.</h2>
             <p>
-              The work is personal, precise, and practical. We build the
-              habits, standards, and internal structure that support high-level
-              output.
+              The work is personal, precise, and practical — built around the
+              standards that support high-level output.
             </p>
           </div>
-          <div className="pillar-grid">
+          <div className="method-principles">
             {pillars.map((pillar) => (
-              <article className="pillar-card" key={pillar.title}>
-                <span>{pillar.title}</span>
+              <article className="method-principle" key={pillar.title}>
+                <span>{pillar.number}</span>
+                <h3>{pillar.title}</h3>
                 <p>{pillar.copy}</p>
               </article>
             ))}
