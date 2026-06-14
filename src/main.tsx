@@ -122,7 +122,10 @@ function App() {
     <>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Pernille Performance home">
-          Pernille Performance
+          <span className="brand-mark" aria-hidden="true">
+            <img src="/images/pernille-performance-logo.png" alt="" />
+          </span>
+          <span className="brand-name">Pernille Performance</span>
         </a>
         <nav className="nav-links" aria-label="Primary navigation">
           <a href="#method">Method</a>

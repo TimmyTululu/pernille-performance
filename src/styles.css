@@ -107,10 +107,33 @@ img {
 
 .brand {
   justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  max-height: 58px;
   color: var(--text-primary);
   font-size: 1rem;
   font-weight: 620;
   letter-spacing: 0;
+}
+
+.brand-mark {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
+  overflow: hidden;
+}
+
+.brand-mark img {
+  width: 72px;
+  height: 72px;
+  max-width: none;
+  transform: translate(-10px, -8px);
+}
+
+.brand-name {
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -1161,6 +1184,20 @@ h2 {
 
   .brand {
     font-size: 0.96rem;
+    gap: 12px;
+    max-height: 50px;
+  }
+
+  .brand-mark {
+    width: 46px;
+    height: 46px;
+    flex-basis: 46px;
+  }
+
+  .brand-mark img {
+    width: 64px;
+    height: 64px;
+    transform: translate(-9px, -7px);
   }
 
   .nav-cta {
