@@ -1,7 +1,7 @@
 :root {
   color-scheme: light;
   --ink: #15120f;
-  --paper: #fbfaf7;
+  --paper: #f1dfc8;
   --accent: #9d3d2f;
   --accent-dark: #6d2c24;
   --muted: #5f5a52;
@@ -19,8 +19,8 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    radial-gradient(circle at 20% 20%, rgba(157, 61, 47, 0.14), transparent 28rem),
-    linear-gradient(135deg, #fbfaf7 0%, #f0ebe3 52%, #e2e8e4 100%);
+    radial-gradient(circle at 20% 20%, rgba(157, 61, 47, 0.16), transparent 30rem),
+    linear-gradient(135deg, #f1dfc8 0%, #ead1b2 54%, #dcc098 100%);
   color: var(--ink);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -51,10 +51,10 @@ a {
 }
 
 h1 {
-  max-width: 780px;
+  max-width: 1120px;
   margin: 0;
-  font-size: clamp(3.2rem, 12vw, 7.6rem);
-  line-height: 0.92;
+  font-size: clamp(4.5rem, 17vw, 11rem);
+  line-height: 0.85;
   letter-spacing: 0;
 }
 
