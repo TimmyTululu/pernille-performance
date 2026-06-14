@@ -173,7 +173,7 @@ function App() {
         >
           <div className="testimonials-heading">
             <p className="section-kicker">Testimonials</p>
-            <h2 id="testimonials-title">Trusted by women doing the work.</h2>
+            <h2 id="testimonials-title">Trusted by women doing the work</h2>
           </div>
           <div className="testimonial-marquee" aria-label="Client testimonials">
             <div className="testimonial-track">

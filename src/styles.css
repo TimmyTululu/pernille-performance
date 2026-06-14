@@ -504,12 +504,17 @@ h2 {
 .testimonials-heading {
   width: min(calc(100% - 40px), var(--max-width));
   margin: 0 auto clamp(34px, 4vw, 48px);
+  text-align: center;
 }
 
 .testimonials-heading h2 {
-  max-width: 880px;
+  max-width: 1040px;
+  margin-right: auto;
   margin-bottom: 0;
-  font-size: clamp(2.1rem, 3.6vw, 3.7rem);
+  margin-left: auto;
+  font-size: clamp(2.65rem, 5.2vw, 5.35rem);
+  font-weight: 580;
+  line-height: 0.98;
   text-wrap: balance;
 }
 
@@ -535,16 +540,28 @@ h2 {
 }
 
 .testimonial-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex: 0 0 clamp(440px, 46vw, 660px);
   min-height: clamp(300px, 26vw, 360px);
   padding: clamp(22px, 2.2vw, 30px);
-  border: 1px solid rgba(79, 73, 63, 0.18);
+  border: 1px solid rgba(93, 81, 63, 0.36);
   border-radius: 6px;
-  background: rgba(255, 249, 238, 0.56);
-  box-shadow: 0 18px 44px rgba(54, 48, 39, 0.08);
+  background: rgba(255, 249, 238, 0.72);
+  box-shadow:
+    0 22px 54px rgba(54, 48, 39, 0.12),
+    0 1px 0 rgba(255, 249, 238, 0.92) inset;
+}
+
+.testimonial-card::after {
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(139, 116, 79, 0.18);
+  border-radius: 3px;
+  content: "";
+  pointer-events: none;
 }
 
 .testimonial-card::before {
