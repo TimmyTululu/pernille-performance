@@ -73,7 +73,7 @@ function App() {
         <nav className="nav-links" aria-label="Primary navigation">
           <a href="#method">Method</a>
           <a href="#results">Results</a>
-          <a href="#who">Who It&apos;s For</a>
+          <a href="#who">For</a>
           <a href="#apply">Apply</a>
         </nav>
         <a className="nav-cta" href={applicationLink}>
@@ -98,7 +98,9 @@ function App() {
               </a>
             </div>
             <p className="hero-microcopy hero-reveal">
-              Remote coaching. Personal standards. Serious women only.
+              <span>Remote coaching</span>
+              <span>Personal standards</span>
+              <span>Serious women only</span>
             </p>
           </div>
           <figure className="hero-media hero-reveal">
