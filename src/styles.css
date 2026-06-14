@@ -1020,6 +1020,17 @@ h2 {
     padding: 26px 22px;
     border-right: 0;
     border-bottom: 1px solid rgba(83, 63, 36, 0.28);
+    text-align: center;
+  }
+
+  .method-principle-heading {
+    justify-content: center;
+  }
+
+  .method-principle p {
+    max-width: 34rem;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .method-principle:last-child {
