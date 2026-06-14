@@ -116,7 +116,7 @@ function App() {
             </h1>
             <p className="hero-lead hero-reveal">
               1:1 coaching for ambitious women in sport, business, and life,
-              built around clarity, discipline, strength, and execution.
+              built around discipline, strength, and execution.
             </p>
             <div className="hero-actions hero-reveal">
               <a className="button button-primary" href={applicationLink}>
