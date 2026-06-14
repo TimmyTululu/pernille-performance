@@ -183,8 +183,8 @@ function App() {
           data-reveal
         >
           <div className="section-heading">
-            <h2 id="why-pernille-title">WHY PERNILLE</h2>
-            <p>The standard behind the coaching.</p>
+            <p className="section-kicker">Why Pernille</p>
+            <h2 id="why-pernille-title">The standard behind the coaching.</h2>
           </div>
           <div className="why-pernille-copy">
             <p>

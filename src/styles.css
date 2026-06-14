@@ -449,7 +449,7 @@ h2 {
   line-height: 0.98;
 }
 
-.why-pernille .section-heading p {
+.why-pernille .section-heading p:not(.section-kicker) {
   max-width: none;
   font-size: clamp(1.06rem, 1.55vw, 1.28rem);
   white-space: nowrap;
@@ -515,7 +515,7 @@ h2 {
   margin-bottom: clamp(12px, 1.6vw, 18px);
 }
 
-.method-section .section-heading p {
+.method-section .section-heading p:not(.section-kicker) {
   max-width: 1010px;
   margin-right: auto;
   margin-left: auto;
@@ -812,7 +812,7 @@ h2 {
   border-bottom: 1px solid var(--line);
 }
 
-.split .section-heading p {
+.split .section-heading p:not(.section-kicker) {
   max-width: 920px;
 }
 
@@ -1162,8 +1162,10 @@ h2 {
   }
 
   .why-pernille h2 {
+    max-width: 12ch;
+    margin-right: auto;
+    margin-left: auto;
     font-size: clamp(2.05rem, 9vw, 2.65rem);
-    white-space: nowrap;
   }
 
   .method-section h2 {
@@ -1172,7 +1174,7 @@ h2 {
     margin-left: auto;
   }
 
-  .why-pernille .section-heading p {
+  .why-pernille .section-heading p:not(.section-kicker) {
     white-space: normal;
   }
 
