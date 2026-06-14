@@ -240,10 +240,7 @@ function App() {
         <section className="apply" id="apply" aria-labelledby="apply-title" data-reveal>
           <p className="section-kicker">Apply</p>
           <h2 id="apply-title">Ready to level up?</h2>
-          <p>
-            If you are serious about raising your standard, apply for 1:1
-            coaching.
-          </p>
+          <p>If you are serious about raising your standard, apply for 1:1 coaching.</p>
           <a className="button button-primary" href={applicationLink}>
             Apply for Coaching
           </a>
