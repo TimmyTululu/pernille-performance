@@ -109,31 +109,24 @@ img {
   justify-self: start;
   display: inline-flex;
   align-items: center;
-  gap: 14px;
-  max-height: 58px;
-  color: var(--text-primary);
-  font-size: 1rem;
-  font-weight: 620;
-  letter-spacing: 0;
+  width: 64px;
+  height: 64px;
+  max-height: 64px;
 }
 
 .brand-mark {
   position: relative;
-  width: 52px;
-  height: 52px;
-  flex: 0 0 52px;
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
   overflow: hidden;
 }
 
 .brand-mark img {
-  width: 72px;
-  height: 72px;
+  width: 82px;
+  height: 82px;
   max-width: none;
-  transform: translate(-10px, -8px);
-}
-
-.brand-name {
-  white-space: nowrap;
+  transform: translate(-12px, -11px);
 }
 
 .nav-links {
@@ -1183,21 +1176,21 @@ h2 {
   }
 
   .brand {
-    font-size: 0.96rem;
-    gap: 12px;
-    max-height: 50px;
+    width: 56px;
+    height: 56px;
+    max-height: 56px;
   }
 
   .brand-mark {
-    width: 46px;
-    height: 46px;
-    flex-basis: 46px;
+    width: 56px;
+    height: 56px;
+    flex-basis: 56px;
   }
 
   .brand-mark img {
-    width: 64px;
-    height: 64px;
-    transform: translate(-9px, -7px);
+    width: 72px;
+    height: 72px;
+    transform: translate(-11px, -10px);
   }
 
   .nav-cta {
