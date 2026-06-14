@@ -53,6 +53,7 @@ html {
 body {
   min-height: 100vh;
   margin: 0;
+  overflow-x: hidden;
   background:
     radial-gradient(circle at 78% 4%, rgba(139, 116, 79, 0.13), transparent 32rem),
     radial-gradient(circle at 4% 12%, rgba(99, 112, 82, 0.12), transparent 30rem),
@@ -411,6 +412,54 @@ h2 {
   margin-right: auto;
   margin-left: auto;
   text-wrap: balance;
+}
+
+.why-pernille {
+  width: 100%;
+  max-width: none;
+  padding-right: max(20px, calc((100vw - var(--max-width)) / 2));
+  padding-left: max(20px, calc((100vw - var(--max-width)) / 2));
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(90deg, rgba(99, 112, 82, 0.08), transparent 44%),
+    linear-gradient(180deg, rgba(248, 244, 234, 0.9), rgba(241, 238, 230, 0.96));
+}
+
+.why-pernille .section-heading {
+  max-width: 1080px;
+}
+
+.why-pernille h2 {
+  margin-bottom: clamp(14px, 1.7vw, 20px);
+  font-size: clamp(2.55rem, 4.8vw, 5rem);
+  font-weight: 580;
+  line-height: 0.98;
+}
+
+.why-pernille .section-heading p {
+  max-width: none;
+  font-size: clamp(1.06rem, 1.55vw, 1.28rem);
+  white-space: nowrap;
+}
+
+.why-pernille-copy {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: clamp(40px, 5vw, 64px) auto 0;
+  padding-top: clamp(30px, 4vw, 46px);
+  border-top: 1px solid rgba(139, 116, 79, 0.28);
+}
+
+.why-pernille-copy p {
+  width: 100%;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.34vw, 1.18rem);
+  line-height: 1.72;
+}
+
+.why-pernille-copy p + p {
+  margin-top: 22px;
 }
 
 .method-section {
@@ -1011,6 +1060,18 @@ h2 {
     padding-left: 14px;
   }
 
+  .why-pernille {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .why-pernille .section-heading,
+  .why-pernille-copy,
+  .method-section .section-heading {
+    width: 100%;
+    max-width: calc(100vw - 28px);
+  }
+
   .hero {
     gap: 34px;
     width: 100%;
@@ -1018,8 +1079,8 @@ h2 {
   }
 
   h1 {
-    max-width: 12.8ch;
-    font-size: clamp(2.55rem, 11vw, 3.85rem);
+    max-width: min(100%, 11.4ch);
+    font-size: clamp(2.5rem, 10.4vw, 3.6rem);
     line-height: 0.97;
   }
 
@@ -1064,6 +1125,31 @@ h2 {
   .section,
   .apply {
     padding: 82px 0;
+  }
+
+  .why-pernille h2 {
+    font-size: clamp(2.05rem, 9vw, 2.65rem);
+    white-space: nowrap;
+  }
+
+  .method-section h2 {
+    max-width: 12ch;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .why-pernille .section-heading p {
+    white-space: normal;
+  }
+
+  .why-pernille-copy {
+    margin-top: 36px;
+    padding-top: 30px;
+  }
+
+  .why-pernille-copy p {
+    font-size: 0.98rem;
+    line-height: 1.64;
   }
 
   .apply {

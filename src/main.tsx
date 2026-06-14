@@ -177,6 +177,39 @@ function App() {
         </section>
 
         <section
+          className="section why-pernille"
+          id="why-pernille"
+          aria-labelledby="why-pernille-title"
+          data-reveal
+        >
+          <div className="section-heading">
+            <h2 id="why-pernille-title">WHY PERNILLE</h2>
+            <p>The standard behind the coaching.</p>
+          </div>
+          <div className="why-pernille-copy">
+            <p>
+              Pernille Høgh Andreasen is a Danish performance coach with a
+              background in elite sport, sports science, entrepreneurship, and
+              international remote work.
+            </p>
+            <p>
+              Before coaching women privately, she competed as a high-level
+              dancer and represented Denmark twice at the World Championships.
+              She later studied Sports Science and worked in elite athlete
+              environments, supporting performers who were training under
+              pressure and chasing demanding goals.
+            </p>
+            <p>
+              Her coaching is built for women who have already proven they can
+              achieve. The work is not motivation. It is not endless reflection.
+              It is private, direct coaching around standards, decision-making,
+              discipline, and execution.
+            </p>
+            <p>For women who are ready to stop negotiating with their own potential.</p>
+          </div>
+        </section>
+
+        <section
           className="section method-section"
           id="method"
           aria-labelledby="method-title"
