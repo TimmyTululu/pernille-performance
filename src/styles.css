@@ -417,8 +417,9 @@ h2 {
   padding-left: max(20px, calc((100vw - var(--max-width)) / 2));
   border-top: 1px solid rgba(244, 238, 227, 0.16);
   background:
-    linear-gradient(180deg, rgba(20, 22, 17, 0.97), rgba(33, 26, 19, 0.98)),
-    var(--bg-graphite);
+    radial-gradient(circle at 50% -14%, rgba(177, 146, 92, 0.14), transparent 34rem),
+    linear-gradient(180deg, rgba(39, 49, 35, 0.99), rgba(28, 35, 27, 0.99)),
+    #1f291f;
   color: var(--text-inverse);
 }
 
@@ -440,6 +441,10 @@ h2 {
 .method-section h2,
 .method-section .section-kicker {
   color: var(--white);
+}
+
+.method-section h2 {
+  margin-bottom: clamp(12px, 1.6vw, 18px);
 }
 
 .method-section .section-heading p {
