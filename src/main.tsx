@@ -211,7 +211,7 @@ function App() {
         >
           <div className="section-heading">
             <p className="section-kicker">Who It&apos;s For</p>
-            <h2 id="who-title">For women who are already in motion.</h2>
+            <h2 id="who-title">For women who are already in motion</h2>
             <p>
               This is for athletes, founders, leaders, creatives, and
               high-achieving women who are ready to be coached directly.
@@ -235,7 +235,7 @@ function App() {
         <section className="section about" aria-labelledby="about-title" data-reveal>
           <div>
             <p className="section-kicker">Coach</p>
-            <h2 id="about-title">Coached by Pernille.</h2>
+            <h2 id="about-title">Coached by Pernille</h2>
           </div>
           <p>
             Pernille works with ambitious women worldwide through remote 1:1
