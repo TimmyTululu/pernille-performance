@@ -781,23 +781,31 @@ h2 {
 
 .fit-panel {
   width: min(100%, 840px);
-  padding: clamp(28px, 4vw, 44px);
-  border-top: 1px solid var(--line-strong);
-  border-bottom: 1px solid var(--line);
-  background: rgba(251, 247, 239, 0.42);
+  padding: clamp(30px, 4vw, 48px);
+  border: 1px solid rgba(139, 116, 79, 0.34);
+  border-radius: 6px;
+  background: rgba(248, 244, 234, 0.66);
+  box-shadow:
+    0 18px 42px rgba(54, 48, 39, 0.07),
+    0 1px 0 rgba(255, 249, 238, 0.72) inset;
+}
+
+.fit-panel span {
+  text-align: center;
 }
 
 .fit-panel ul {
   display: grid;
-  gap: 22px;
-  margin: 34px 0 0;
+  gap: 20px;
+  width: min(100%, 660px);
+  margin: 34px auto 0;
   padding: 0;
   list-style: none;
 }
 
 .fit-panel li {
   position: relative;
-  padding-left: 28px;
+  padding-left: 34px;
   color: var(--muted);
   font-size: 1rem;
   line-height: 1.45;
@@ -805,13 +813,13 @@ h2 {
 
 .fit-panel li::before {
   position: absolute;
-  top: 0.68em;
+  top: 0.03em;
   left: 0;
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: var(--accent);
-  content: "";
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 760;
+  line-height: 1;
+  content: "✓";
 }
 
 .apply {
@@ -1191,8 +1199,7 @@ h2 {
   }
 
   .fit-panel {
-    padding-right: 0;
-    padding-left: 0;
+    padding: 28px 22px;
   }
 }
 

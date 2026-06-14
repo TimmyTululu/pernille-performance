@@ -315,7 +315,7 @@ function App() {
           data-reveal
         >
           <div className="section-heading">
-            <p className="section-kicker">Who It&apos;s For</p>
+            <p className="section-kicker">For You</p>
             <h2 id="who-title">For women who are already in motion</h2>
             <p>
               This is for athletes, founders, leaders, creatives, and
@@ -356,7 +356,7 @@ function App() {
         <nav aria-label="Footer navigation">
           <a href="#method">Method</a>
           <a href="#testimonials">Testimonials</a>
-          <a href="#who">Who It&apos;s For</a>
+          <a href="#who">For You</a>
           <a href="#apply">Apply</a>
         </nav>
         <p>© 2026 Pernille Performance. All rights reserved.</p>
