@@ -337,20 +337,6 @@ function App() {
           </div>
         </section>
 
-        <section className="section about" aria-labelledby="about-title" data-reveal>
-          <div>
-            <p className="section-kicker">Coach</p>
-            <h2 id="about-title">Coached by Pernille</h2>
-          </div>
-          <p>
-            Pernille works with ambitious women worldwide through remote 1:1
-            coaching. Her approach blends performance, discipline, personal
-            development, and practical execution for women who want to operate
-            at a higher level.
-          </p>
-          <p className="about-note">Danish by background. Global by practice.</p>
-        </section>
-
         <section className="apply" id="apply" aria-labelledby="apply-title" data-reveal>
           <p className="section-kicker">Apply</p>
           <h2 id="apply-title">Ready to level up?</h2>
