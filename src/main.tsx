@@ -114,7 +114,7 @@ function App() {
           <div className="hero-copy">
             <p className="eyebrow hero-reveal">1:1 High-Performance Coaching</p>
             <h1 className="hero-reveal" id="hero-title">
-              Elite performance coaching for women already in motion.
+              Elite performance coaching for women already in motion
             </h1>
             <p className="hero-lead hero-reveal">
               1:1 coaching for ambitious women in sport, business, and life,
