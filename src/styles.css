@@ -10,6 +10,8 @@
   --text-inverse: #fff9ee;
   --text-muted: #746f65;
   --text-muted-inverse: #d5ccb9;
+  --brand-gold: #c9a069;
+  --brand-gold-hover: #b88d54;
   --accent: #8b744f;
   --accent-strong: #637052;
   --accent-dark: #35402b;
@@ -138,10 +140,10 @@ img {
   justify-content: center;
   min-height: 44px;
   padding: 0 24px;
-  border: 1px solid rgba(53, 64, 43, 0.28);
+  border: 1px solid rgba(201, 160, 105, 0.42);
   border-radius: 999px;
-  background: var(--accent-dark);
-  color: var(--text-inverse);
+  background: var(--brand-gold);
+  color: var(--text-primary);
   font-size: 0.82rem;
   font-weight: 720;
   letter-spacing: 0.04em;
@@ -297,38 +299,38 @@ h2 {
 }
 
 .button-primary {
-  border: 1px solid var(--accent-dark);
-  background: var(--accent-dark);
-  color: var(--text-inverse);
+  border: 1px solid var(--brand-gold);
+  background: var(--brand-gold);
+  color: var(--text-primary);
 }
 
 .button-primary:hover,
 .nav-cta:hover {
-  background: #26311f;
-  border-color: #26311f;
-  color: var(--text-inverse);
-  box-shadow: 0 18px 42px rgba(53, 64, 43, 0.18);
+  background: var(--brand-gold-hover);
+  border-color: var(--brand-gold-hover);
+  color: var(--text-primary);
+  box-shadow: 0 18px 42px rgba(201, 160, 105, 0.22);
 }
 
 .apply .button-primary {
-  border-color: var(--accent-dark);
-  background: var(--accent-dark);
-  color: var(--text-inverse);
+  border-color: var(--brand-gold);
+  background: var(--brand-gold);
+  color: var(--text-primary);
   min-height: 62px;
   padding: 0 42px;
   border-radius: 999px;
   box-shadow:
-    0 18px 44px rgba(53, 64, 43, 0.16),
+    0 18px 44px rgba(201, 160, 105, 0.2),
     0 1px 0 rgba(255, 249, 238, 0.16) inset;
   font-size: 0.94rem;
   letter-spacing: 0.05em;
 }
 
 .apply .button-primary:hover {
-  border-color: #202819;
-  background: #202819;
-  color: var(--text-inverse);
-  box-shadow: 0 16px 38px rgba(44, 53, 33, 0.2);
+  border-color: var(--brand-gold-hover);
+  background: var(--brand-gold-hover);
+  color: var(--text-primary);
+  box-shadow: 0 16px 38px rgba(201, 160, 105, 0.24);
 }
 
 .button:focus-visible,
@@ -470,12 +472,9 @@ h2 {
   padding-bottom: clamp(76px, 8vw, 108px);
   padding-right: max(20px, calc((100% - var(--max-width)) / 2));
   padding-left: max(20px, calc((100% - var(--max-width)) / 2));
-  border-top: 1px solid rgba(244, 238, 227, 0.16);
-  background:
-    radial-gradient(circle at 50% -14%, rgba(177, 146, 92, 0.14), transparent 34rem),
-    linear-gradient(180deg, rgba(39, 49, 35, 0.99), rgba(28, 35, 27, 0.99)),
-    #1f291f;
-  color: var(--text-inverse);
+  border-top: 1px solid rgba(83, 63, 36, 0.18);
+  background: var(--brand-gold);
+  color: var(--text-primary);
 }
 
 .method-section::before {
@@ -483,7 +482,7 @@ h2 {
   width: min(100%, var(--max-width));
   height: 1px;
   margin: calc(clamp(76px, 8vw, 108px) * -1) auto clamp(42px, 4.8vw, 60px);
-  background: linear-gradient(90deg, transparent, rgba(160, 120, 79, 0.68), transparent);
+  background: linear-gradient(90deg, transparent, rgba(83, 63, 36, 0.36), transparent);
   content: "";
 }
 
@@ -495,7 +494,7 @@ h2 {
 
 .method-section h2,
 .method-section .section-kicker {
-  color: var(--white);
+  color: var(--text-primary);
 }
 
 .method-section h2 {
@@ -506,21 +505,21 @@ h2 {
   max-width: 1010px;
   margin-right: auto;
   margin-left: auto;
-  color: var(--muted-dark);
+  color: rgba(41, 37, 29, 0.74);
 }
 
 .method-principles {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: clamp(38px, 4.8vw, 56px);
-  border-top: 1px solid var(--line-dark);
-  border-bottom: 1px solid var(--line-dark);
+  border-top: 1px solid rgba(83, 63, 36, 0.28);
+  border-bottom: 1px solid rgba(83, 63, 36, 0.28);
 }
 
 .method-principle {
   min-height: 184px;
   padding: clamp(24px, 2.35vw, 34px) clamp(26px, 2.8vw, 38px);
-  border-right: 1px solid var(--line-dark);
+  border-right: 1px solid rgba(83, 63, 36, 0.28);
 }
 
 .method-principle:last-child {
@@ -537,7 +536,7 @@ h2 {
 .method-principle span {
   display: inline-flex;
   flex: 0 0 auto;
-  color: var(--tobacco);
+  color: rgba(83, 63, 36, 0.82);
   font-size: 0.76rem;
   font-weight: 720;
   letter-spacing: 0.16em;
@@ -554,13 +553,13 @@ h2 {
 
 .method-principle h3 {
   margin: 0;
-  color: var(--white);
+  color: var(--text-primary);
 }
 
 .method-principle p {
   max-width: 320px;
   margin: 0;
-  color: var(--muted-dark);
+  color: rgba(41, 37, 29, 0.72);
   font-size: 1rem;
   line-height: 1.55;
 }
@@ -1020,7 +1019,7 @@ h2 {
     min-height: auto;
     padding: 26px 22px;
     border-right: 0;
-    border-bottom: 1px solid var(--line-dark);
+    border-bottom: 1px solid rgba(83, 63, 36, 0.28);
   }
 
   .method-principle:last-child {
