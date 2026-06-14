@@ -86,7 +86,7 @@ img {
   top: 0;
   z-index: 10;
   display: grid;
-  grid-template-columns: minmax(190px, 1fr) auto minmax(190px, 1fr);
+  grid-template-columns: minmax(300px, 1fr) auto minmax(190px, 1fr);
   align-items: center;
   gap: 44px;
   width: 100%;
@@ -109,7 +109,8 @@ img {
   justify-self: start;
   display: inline-flex;
   align-items: center;
-  width: 64px;
+  gap: 13px;
+  width: 284px;
   height: 64px;
   max-height: 64px;
 }
@@ -127,6 +128,21 @@ img {
   height: 82px;
   max-width: none;
   transform: translate(-12px, -11px);
+}
+
+.brand-wordmark {
+  position: relative;
+  width: 202px;
+  height: 42px;
+  flex: 0 0 202px;
+  overflow: hidden;
+}
+
+.brand-wordmark img {
+  width: 263px;
+  height: 263px;
+  max-width: none;
+  transform: translate(-30px, -110px);
 }
 
 .nav-links {
@@ -1179,6 +1195,10 @@ h2 {
     width: 56px;
     height: 56px;
     max-height: 56px;
+  }
+
+  .brand-wordmark {
+    display: none;
   }
 
   .brand-mark {
