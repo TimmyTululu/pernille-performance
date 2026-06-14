@@ -344,7 +344,7 @@ function App() {
           <a className="button button-primary" href={applicationLink}>
             Apply for Coaching
           </a>
-          <span>Limited remote coaching spots available.</span>
+          <span>Limited coaching spots available.</span>
         </section>
       </main>
 
