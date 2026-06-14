@@ -31,6 +31,39 @@ const fitSignals = [
   "You are done negotiating with the version of you that keeps playing small",
 ];
 
+const testimonials = [
+  {
+    name: "Anna",
+    location: "United States",
+    copy: "Working with Pernille has been such a great experienice! Every session with her is such an eye opener. She makes me feel understood and motivated! She is kind, authentic, and inspires me to go after what I want in life. Getting to work with her has helped me follow my passions and shown me that if I work hard and believe in myself, I can do anything I put my mind to. She not only makes me feel heard and understood, but she also works hard herself, too. Pernille is the most inspiring person I have met! I definitely recommend working with her if you get the chance!",
+  },
+  {
+    name: "Phyllis",
+    location: "Kenya",
+    copy: "Before our sessions I felt stuck in my own head and unsure of how to move forward. I could think things through on my own, but I kept going in circles. Working with her helped me slow down and see things differently. I started to notice patterns in how I think and react that I hadn't fully seen before. What changed for me is that I now feel more confident and sure of myself. I trust my decisions more, instead of second-guessing everything. It feels like I'm no longer fighting myself all the time. If you're looking for a coach to help you get unstuck, Pernille is someone I absolutely recommend.",
+  },
+  {
+    name: "Hazal",
+    location: "Turkey",
+    copy: "First of all, thank you for everything, every minutes that you spend for us, I want to thank you to create a safe zone for me. You listen me a lot, you understand what is my stuck point, you didn't just check my daily things but also you pointed out my feelings. So, the change was so deep. The small steps that you adviced me changed my whole life, even though they are small, it made a huge different and I learned to look at my and my life from a different perspective. Your gudience was priceless, THANK YOU SO MUCH for everything.",
+  },
+  {
+    name: "Lone",
+    location: "Denmark",
+    copy: "I can wholeheartedly recommend Humind Coach. Pernille is passionate, professional, and highly skilled at creating a safe and trusting environment throughout the coaching sessions. She listens attentively and asks the right questions that get straight to the heart of the matter. Through our work together, I gained clarity about my career situation, and that clarity has stayed with me ever since. At no point did I doubt that I was the focus of the process. After each session, I was encouraged to reflect on and write down the key takeaways that felt most important to me. These reflections became practical focus points that I still use today. One realisation in particular has stayed with me and can be applied to any area of life: if I start today, I am already closer to my goal than if I continue putting it off. A huge thank you and my highest praise to you, Pernille.",
+  },
+  {
+    name: "Milan",
+    location: "Serbia",
+    copy: "So I just want to recommend working with Pernille, she's an amazing coach to work with! Her session helped me to focus on my goals for the next period, where I have approached them step by step and not forced myself to do it instantly. Still working on all my goals, but her guidance in helping me to see the right path for me, helped me a lot, and made my mind clear on the goal and how to achieve it.",
+  },
+  {
+    name: "Bernadett",
+    location: "Hungary",
+    copy: "I am very thankful for Pernille. In our session she patiently talked me through my ambitions and anxiety about professional and personal choices, and goals, connecting dots that I was either scared to connect or simply never saw in the first place. She helped me brake down the reasons of my hesitations, the potentials that I thought were just small ideas, identifying possibilities and the actions I should be taking, giving me tools to follow up on myself. She really listens to not just to what you talk about, but can see where your silence comes in - She guides you to get started on concrete thought processes, motivating to achieve. I would highly recommend anyone - at any age - to start working with Pernille, who feels stuck, frustrated, distracted or lost - or simply looking for a new motivation. She is professional and caring, and will for sure show you your best and what you are capable of!",
+  },
+];
+
 function App() {
   useEffect(() => {
     const revealElements = document.querySelectorAll<HTMLElement>("[data-reveal]");
@@ -65,6 +98,7 @@ function App() {
         </a>
         <nav className="nav-links" aria-label="Primary navigation">
           <a href="#method">Method</a>
+          <a href="#testimonials">Testimonials</a>
           <a href="#who">For</a>
           <a href="#apply">Apply</a>
         </nav>
@@ -132,6 +166,35 @@ function App() {
         </section>
 
         <section
+          className="testimonials"
+          id="testimonials"
+          aria-labelledby="testimonials-title"
+          data-reveal
+        >
+          <div className="testimonials-heading">
+            <p className="section-kicker">Testimonials</p>
+            <h2 id="testimonials-title">Trusted by women doing the work.</h2>
+          </div>
+          <div className="testimonial-marquee" aria-label="Client testimonials">
+            <div className="testimonial-track">
+              {[...testimonials, ...testimonials].map((testimonial, index) => (
+                <article
+                  className="testimonial-card"
+                  key={`${testimonial.name}-${index}`}
+                  aria-hidden={index >= testimonials.length}
+                >
+                  <p>{testimonial.copy}</p>
+                  <footer>
+                    <strong>{testimonial.name}</strong>
+                    <span>{testimonial.location}</span>
+                  </footer>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section
           className="section split"
           id="who"
           aria-labelledby="who-title"
@@ -195,6 +258,7 @@ function App() {
         </div>
         <nav aria-label="Footer navigation">
           <a href="#method">Method</a>
+          <a href="#testimonials">Testimonials</a>
           <a href="#who">Who It&apos;s For</a>
           <a href="#apply">Apply</a>
         </nav>
