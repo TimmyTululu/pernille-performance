@@ -318,12 +318,10 @@ function App() {
             <h2 id="who-title">For women who are already in motion</h2>
             <p>
               This is for athletes, founders, leaders, creatives, and
-              high-achieving women who are ready to be coached directly.
-            </p>
-            <p>
-              You may be building a business, competing in sport, leading a
-              team, returning to your body, or preparing for your next level.
-              The work starts where you are and raises the standard from there.
+              high-achieving women who are ready to be coached directly. You
+              may be building a business, competing in sport, leading a team,
+              returning to your body, or preparing for your next level. The work
+              starts where you are and raises the standard from there.
             </p>
           </div>
           <div className="fit-panel">
