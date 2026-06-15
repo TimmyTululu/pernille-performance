@@ -186,7 +186,7 @@ function App() {
         >
           <div className="section-heading">
             <h2 id="why-pernille-title">Why Pernille</h2>
-            <p>The standard behind the coaching.</p>
+            <p>The standard behind the coaching</p>
           </div>
           <div className="why-pernille-copy">
             <p>
