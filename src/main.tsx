@@ -19,7 +19,7 @@ const pillars = [
   {
     number: "3",
     title: "Execution",
-    copy: "Move with focus. Follow through under pressure. Build proof through action.",
+    copy: "Cut the noise. Follow through under pressure. Build proof through action.",
   },
 ];
 
