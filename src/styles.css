@@ -1231,7 +1231,7 @@ h2 {
   h1 {
     max-width: min(100%, 11.4ch);
     font-size: clamp(2.5rem, 10.4vw, 3.6rem);
-    line-height: 0.97;
+    line-height: 1.04;
   }
 
   .hero-lead {
