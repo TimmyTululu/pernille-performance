@@ -145,7 +145,7 @@ function App() {
               Elite performance coaching for women already in motion
             </h1>
             <p className="hero-lead hero-reveal">
-              1:1 coaching for ambitious women in sport, business, and life,
+              1:1 coaching for ambitious women in business, fitness, and life,
               built around discipline, strength, and execution.
             </p>
             <div className="hero-actions hero-reveal">
