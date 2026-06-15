@@ -325,7 +325,7 @@ function App() {
             </p>
           </div>
           <div className="fit-panel">
-            <span>This is for you if</span>
+            <span>This is for you if…</span>
             <ul>
               {fitSignals.map((signal) => (
                 <li key={signal}>{signal}</li>
