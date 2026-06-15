@@ -154,9 +154,9 @@ function App() {
               </a>
             </div>
             <p className="hero-microcopy hero-reveal">
-              <span>Remote coaching</span>
-              <span>Personal standards</span>
-              <span>Serious women only</span>
+              <span>REMOTE COACHING</span>
+              <span>DECISIVE ACTION</span>
+              <span>SERIOUS WOMEN ONLY</span>
             </p>
           </div>
           <figure className="hero-media hero-reveal">
