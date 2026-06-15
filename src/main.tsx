@@ -198,7 +198,7 @@ function App() {
               Before coaching women privately, she competed as a high-level
               dancer and represented Denmark twice at the World Championships.
               She later studied Sports Science and worked in elite athlete
-              environments, supporting performers who were training under
+              environments, supporting high-performers who were training under
               pressure and chasing demanding goals.
             </p>
             <p>
