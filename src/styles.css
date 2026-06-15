@@ -857,6 +857,7 @@ h2 {
 }
 
 .split {
+  --fit-panel-width: 840px;
   display: grid;
   gap: clamp(38px, 5vw, 62px);
   justify-items: center;
@@ -864,15 +865,20 @@ h2 {
   border-bottom: 1px solid var(--line);
 }
 
+.split .section-heading {
+  width: min(100%, var(--fit-panel-width));
+  max-width: none;
+}
+
 .split .section-heading p:not(.section-kicker) {
-  width: min(100%, 840px);
+  width: 100%;
   max-width: none;
   text-wrap: normal;
 }
 
 .fit-panel {
   position: relative;
-  width: min(100%, 840px);
+  width: min(100%, var(--fit-panel-width));
   padding: clamp(30px, 4vw, 48px);
   border: 1px solid rgba(128, 84, 36, 0.42);
   border-radius: 6px;
