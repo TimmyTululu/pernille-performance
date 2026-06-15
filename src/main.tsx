@@ -221,8 +221,8 @@ function App() {
             <p className="section-kicker">Method</p>
             <h2 id="method-title">Performance is trained</h2>
             <p>
-              The work is personal, precise, and practical — built around the
-              standards that support high-level output.
+              The work is personal, progressive and practical — built around
+              the standards that support high-level output.
             </p>
           </div>
           <div className="method-principles">
