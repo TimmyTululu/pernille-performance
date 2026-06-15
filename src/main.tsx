@@ -28,7 +28,7 @@ const fitSignals = [
   "You are ready to be challenged",
   "You care about performance in more than one area of life",
   "You want structure, accountability, and clear standards",
-  "You are done negotiating with the version of you that keeps playing small",
+  "You are ready to turn discipline and consistency into your new standard.",
 ];
 
 const testimonials = [
