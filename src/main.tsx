@@ -207,7 +207,7 @@ function App() {
               It is private, direct coaching around standards, decision-making,
               discipline, and execution.
             </p>
-            <p>For women who are ready to stop negotiating with their own potential.</p>
+            <p>For women ready for the next level.</p>
           </div>
         </section>
 
