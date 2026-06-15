@@ -9,12 +9,12 @@ const pillars = [
   {
     number: "1",
     title: "Clarity",
-    copy: "Know what matters, what moves the needle, and what needs to stop draining energy.",
+    copy: "Know what matters, and what needs to stop draining energy.",
   },
   {
     number: "2",
     title: "Discipline",
-    copy: "Create standards you can live by in training, work, recovery, and decision-making.",
+    copy: "Create standards you can live by in training, work, and decision-making.",
   },
   {
     number: "3",
