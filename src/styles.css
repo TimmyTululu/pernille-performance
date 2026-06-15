@@ -76,6 +76,12 @@ a {
   color: inherit;
 }
 
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -101,7 +107,8 @@ img {
 .brand,
 .nav-links a,
 .nav-cta,
-.button {
+.button,
+.contact-options a {
   text-decoration: none;
 }
 
@@ -385,7 +392,9 @@ h2 {
 .nav-cta:focus-visible,
 .nav-links a:focus-visible,
 .brand:focus-visible,
-.site-footer a:focus-visible {
+.site-footer a:focus-visible,
+.contact-modal-close:focus-visible,
+.contact-options a:focus-visible {
   outline: 3px solid rgba(111, 88, 68, 0.32);
   outline-offset: 4px;
 }
@@ -1105,6 +1114,120 @@ h2 {
   text-align: right;
 }
 
+.contact-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(36, 37, 31, 0.28);
+  backdrop-filter: blur(10px);
+}
+
+.contact-modal {
+  position: relative;
+  width: min(100%, 468px);
+  padding: 34px;
+  border: 1px solid rgba(143, 103, 52, 0.24);
+  border-radius: 18px;
+  background:
+    linear-gradient(145deg, rgba(255, 249, 238, 0.9), rgba(241, 238, 230, 0.96)),
+    var(--bg-soft);
+  box-shadow:
+    0 34px 86px rgba(36, 37, 31, 0.24),
+    0 1px 0 rgba(255, 249, 238, 0.86) inset;
+}
+
+.contact-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: inline-grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(79, 73, 63, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 249, 238, 0.58);
+  color: rgba(41, 37, 29, 0.72);
+  font-size: 1.35rem;
+  line-height: 1;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.contact-modal-close:hover {
+  border-color: rgba(79, 73, 63, 0.3);
+  background: rgba(255, 249, 238, 0.82);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.contact-modal-heading {
+  max-width: 21rem;
+  padding-right: 28px;
+}
+
+.contact-modal-heading h2 {
+  max-width: none;
+  margin: 0;
+  font-size: clamp(1.85rem, 7vw, 2.55rem);
+  line-height: 1.02;
+}
+
+.contact-modal-heading p {
+  margin: 14px 0 0;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.58;
+}
+
+.contact-options {
+  display: grid;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.contact-options a {
+  display: grid;
+  gap: 6px;
+  padding: 18px 20px;
+  border: 1px solid rgba(79, 73, 63, 0.17);
+  border-radius: 12px;
+  background: rgba(255, 249, 238, 0.46);
+  color: var(--text-primary);
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 220ms ease,
+    transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.contact-options a:hover {
+  border-color: rgba(143, 103, 52, 0.36);
+  background: rgba(255, 249, 238, 0.72);
+  box-shadow: 0 18px 40px rgba(54, 48, 39, 0.12);
+  transform: translateY(-2px);
+}
+
+.contact-options span {
+  font-size: 0.96rem;
+  font-weight: 760;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.contact-options small {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
 @media (max-width: 1040px) {
   .site-header {
     grid-template-columns: 1fr auto;
@@ -1234,6 +1357,17 @@ h2 {
     gap: 34px;
     width: 100%;
     padding: 48px 14px 76px;
+  }
+
+  .contact-modal-overlay {
+    align-items: end;
+    padding: 14px;
+  }
+
+  .contact-modal {
+    width: 100%;
+    padding: 30px 22px 22px;
+    border-radius: 18px;
   }
 
   h1 {

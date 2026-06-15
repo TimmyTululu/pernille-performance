@@ -2,8 +2,10 @@ import { StrictMode, useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles.css";
 
-const applicationLink =
+const whatsAppLink =
   "https://wa.me/541126845921?text=Hi%20Pernille%2C%20I%27m%20interested%20in%201%3A1%20performance%20coaching.";
+const emailLink =
+  "mailto:contact@pernilleperformance.com?subject=1%3A1%20Performance%20Coaching%20Inquiry&body=Hi%20Pernille%2C%0A%0AI%27m%20interested%20in%201%3A1%20performance%20coaching.%0A%0A";
 
 const pillars = [
   {
@@ -66,7 +68,9 @@ const testimonials = [
 
 function App() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const swipeStartX = useRef<number | null>(null);
+  const closeButtonRef = useRef<HTMLButtonElement | null>(null);
 
   const showPreviousTestimonial = () => {
     setActiveTestimonial((current) =>
@@ -118,6 +122,21 @@ function App() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    if (!isContactModalOpen) return;
+
+    closeButtonRef.current?.focus();
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsContactModalOpen(false);
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isContactModalOpen]);
+
   return (
     <>
       <header className="site-header">
@@ -132,9 +151,13 @@ function App() {
           <a href="#who">For You</a>
           <a href="#apply">Apply</a>
         </nav>
-        <a className="nav-cta" href={applicationLink}>
+        <button
+          className="nav-cta"
+          type="button"
+          onClick={() => setIsContactModalOpen(true)}
+        >
           Level Up
-        </a>
+        </button>
       </header>
 
       <main id="top">
@@ -149,9 +172,13 @@ function App() {
               built around discipline, strength, and execution.
             </p>
             <div className="hero-actions hero-reveal">
-              <a className="button button-primary" href={applicationLink}>
+              <button
+                className="button button-primary"
+                type="button"
+                onClick={() => setIsContactModalOpen(true)}
+              >
                 Level Up
-              </a>
+              </button>
             </div>
             <p className="hero-microcopy hero-reveal">
               <span>REMOTE COACHING</span>
@@ -338,9 +365,13 @@ function App() {
           <p className="section-kicker">Apply</p>
           <h2 id="apply-title">Ready to level up?</h2>
           <p>If you are serious about raising your standards, apply for 1:1 coaching.</p>
-          <a className="button button-primary" href={applicationLink}>
+          <button
+            className="button button-primary"
+            type="button"
+            onClick={() => setIsContactModalOpen(true)}
+          >
             Apply for Coaching
-          </a>
+          </button>
           <span>Limited coaching spots available</span>
         </section>
       </main>
@@ -358,6 +389,52 @@ function App() {
         </nav>
         <p>© 2026 Pernille Performance. All rights reserved.</p>
       </footer>
+
+      {isContactModalOpen && (
+        <div
+          className="contact-modal-overlay"
+          role="presentation"
+          onMouseDown={(event) => {
+            if (event.target === event.currentTarget) {
+              setIsContactModalOpen(false);
+            }
+          }}
+        >
+          <section
+            className="contact-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="contact-modal-title"
+            aria-describedby="contact-modal-description"
+          >
+            <button
+              className="contact-modal-close"
+              type="button"
+              aria-label="Close contact options"
+              ref={closeButtonRef}
+              onClick={() => setIsContactModalOpen(false)}
+            >
+              ×
+            </button>
+            <div className="contact-modal-heading">
+              <h2 id="contact-modal-title">Choose your next step.</h2>
+              <p id="contact-modal-description">
+                Start the conversation through WhatsApp or email.
+              </p>
+            </div>
+            <div className="contact-options">
+              <a href={whatsAppLink} target="_blank" rel="noreferrer">
+                <span>WhatsApp</span>
+                <small>Send a quick message.</small>
+              </a>
+              <a href={emailLink}>
+                <span>Email</span>
+                <small>Write directly.</small>
+              </a>
+            </div>
+          </section>
+        </div>
+      )}
     </>
   );
 }
