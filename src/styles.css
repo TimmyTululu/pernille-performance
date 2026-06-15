@@ -865,7 +865,9 @@ h2 {
 }
 
 .split .section-heading p:not(.section-kicker) {
-  max-width: 840px;
+  width: min(100%, 840px);
+  max-width: none;
+  text-wrap: normal;
 }
 
 .fit-panel {
